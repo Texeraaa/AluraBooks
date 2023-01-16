@@ -31,6 +31,9 @@
 .container__botao:checked~.lista-menu{
     display: block;
 }
+.container__botao{
+    display: none;
+}
 
 
 .lista-menu__titulo,
@@ -40,6 +43,7 @@
 }
 .lista-menu__titulo{
     color: var(--laranja-titulo);
+    font-weight: 700
 }
 .lista-menu__link{
     background: var(--azul-degrade);
@@ -51,3 +55,4 @@
     font-weight: 400;
     font-size: 16px;
 }
+
