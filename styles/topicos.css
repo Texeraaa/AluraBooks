@@ -1,0 +1,74 @@
+.card__final{
+    background-color: var(--branco);
+    padding-bottom: 1em;
+}
+.card__topico{
+    background: var(--azul-degrade);
+    padding: 1em;
+}
+
+.lista__topico{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.items__topico{
+    margin: 2em 0.5em;
+}
+.texto__topico{
+    color: var(--branco);
+    font-weight: 300;
+    text-align: center;
+}
+.link__topico{
+    color: var(--branco);
+    background-color: var(--laranja-titulo);
+    padding: 1em;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.rodape{
+    background-color: var(--branco-secundario);
+    padding: 16px 32px;
+    border-top: 1px solid #000000;
+}
+.rodape__texto{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.novidades{
+    padding: 1em;
+}
+.novidades__titulo{
+    color: var(--azul);
+    font-weight: 500;
+    font-size: 18px;
+    margin: 1em 0;
+}
+.novidades__texto{
+    color: var(--azul);
+    font-weight: 300;
+    font-size: 16px;
+    margin: 1em 0;
+}
+.novidades__email{
+    background-color: transparent;
+    border: 1px solid var(--azul);
+    color: var(--azul-degrade);
+    border-radius: 24px;
+    padding: 1em;
+    width: 100%;
+    margin: 1em 0;
+}
+.novidades__email::placeholder{
+    font-family: var(--fonte-principal);
+    color: var(--azul);
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    background: url("../img/Email.svg") no-repeat;
+    background-position: 4em;
+}
