@@ -25,7 +25,7 @@
 .container__imagem-titulo,
     .container__texto,
     .container__botao-categoria,
-    .container__texto-categoria{
+    .categoria{
     display: none;
 }
 .lista-menu{
@@ -84,8 +84,7 @@
     .container__imagem-favoritos{
         display: none;
     }
-    .container__texto,
-    .container__texto-categoria{
+    .container__texto{
         color: var(--preto);
         text-align: center;
         padding: 1em 1em;
@@ -94,10 +93,14 @@
         text-decoration: none;
         text-transform: uppercase;
     }
-    .container__botao-categoria:checked~.lista-menu{
+    .categoria:checked~.lista-menu{
         display: block;
         width: auto;
     }
 
-
+    @media screen and (min-width: 1728px) {
+        .container__texto{
+            align-items: flex-start;
+        }
+    }
 }

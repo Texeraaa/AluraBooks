@@ -42,3 +42,12 @@
         margin-left: 0.6em;
     }
 }
+@media screen and (min-width: 1728px) {
+    .rodape__texto{
+        align-self: flex-end;
+    }
+    .rodape__container{
+        padding: 1em;
+        border-left: 1px solid var(--cinza);
+    }
+}
