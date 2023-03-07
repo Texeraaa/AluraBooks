@@ -20,7 +20,6 @@
     --fonte-principal: "Poppins";
     --fonte-alternativa: "Josefin Sans"
 }
-
 body{
     background-color: var(--cor-de-fundo);
     font-family: var(--fonte-principal);

@@ -1,4 +1,3 @@
-
 async function buscaEndereco(cep){
     const mensagemErro = document.querySelector('#erro')
     mensagemErro.innerHTML = "";
