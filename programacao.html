@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta metacharset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AluraBooks</title>
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<header class="cabecalho">
+  <div class="container">
+      <input type="checkbox" id="menu" class="container__botao">
+      <label for="menu">
+      <span class="cabecalho__menu-hamburger container__imagem"></span>
+      </label>
+
+      <!--======================-->
+      <!-- Lista Menu Hamburger -->
+      <!--======================-->
+
+      <ul class="lista-menu">
+          <li class="lista-menu__titulo">Categorias</li>
+          <li class="lista-menu__item">
+              <a href="programacao.html" class="lista-menu__link">Programação</a>
+          </li>
+          <li class="lista-menu__item">
+              <a href="#" class="lista-menu__link">Front-end</a>
+          </li>
+          <li class="lista-menu__item">
+              <a href="#" class="lista-menu__link">Infraestrutura</a>
+          </li>
+          <li class="lista-menu__item">
+              <a href="#" class="lista-menu__link">Business</a>
+          </li>
+          <li class="lista-menu__item">
+              <a href="#" class="lista-menu__link">Design & ux</a>
+          </li>
+      </ul>
+
+      <!--===================-->
+      <!-- Header Visivel Esq-->
+      <!--===================-->
+  
+      <img src="img/Logo.svg" alt="Logo da AluraBooks" class="container__imagem">
+      <h2 class="container__imagem-titulo"> <b> Alura</b>Books</h2>
+  </div>
+      <!--===================-->
+      <!-- Header Visivel Dir-->
+      <!--===================-->
+  <div class="container">
+      <input type="checkbox" id="menu-categoria" class="categoria">
+      <label for="menu-categoria">
+      <p class="container__texto categoria">Categorias</p>
+      </label>
+      <ul class="lista-menu">
+          <li class="lista-menu__item">
+              <a href="programacao.html" class="lista-menu__link">Programação</a>
+          </li>
+          <li class="lista-menu__item">
+              <a href="login.html" class="lista-menu__link">Front-end</a>
+          </li>
+          <li class="lista-menu__item">
+              <a href="login.html" class="lista-menu__link">Infraestrutura</a>
+          </li>
+          <li class="lista-menu__item">
+              <a href="login.html" class="lista-menu__link">Business</a>
+          </li>
+          <li class="lista-menu__item">
+              <a href="login.html" class="lista-menu__link">Design & ux</a>
+          </li>
+      </ul>
+
+      <a href="login.html" class="container__texto">Favoritos</a>
+      <a href="index.html" class="container__texto">Minha estante</a>
+
+      <a href="login.html"><img src="img/Favoritos.svg" alt="Meus favoritos" class="container__imagem-favoritos"></a>
+      <a href="login.html"><img src="img/Compras.svg" alt="Carrinho de compras" class="container__imagem"></a>
+      <a href="login.html"><img src="img/Usuário.svg" alt="Meu perfil" class="container__imagem"></a>
+  </div>
+</header>
+
+<body>
+  <section class="banner">
+    <h2 class="banner__titulo">Encontre os melhores livro de programação</h2>
+    <p class="banner__texto">Esta procurando um livro especifico?</p>
+    <input type="search" class="banner__pesquisa" placeholder="Qual sera sua proxima leitura">
+</section>
+  <nav class="wrap">
+    <ul class="nav">
+      <li><button class="btn__programacao btn-front" href="#" id="btnFiltrarLivrosFront" value="front-end">LIVROS DE
+          FRONT-END</button>
+      </li>
+      <li><button class="btn__programacao btn-back" href="#" id="btnFiltrarLivrosBack" value="back-end">LIVROS DE BACK-END</button>
+      </li>
+      <li><button class="btn__programacao btn-dados" href="#" id="btnFiltrarLivrosDados" value="dados">LIVROS DE DADOS</button></li>
+      <li><button class="btn__programacao btn-disponiveis" href="#" id="btnLivrosDisponiveis">LIVROS DISPONÍVEIS</button></li>
+      <li><button class="btn__programacao btn-ordenacao" href="#" id="btnOrdenarPorPreco">ORDENAR POR PREÇO</button></li>
+    </ul>
+  </nav>
+  <section class="livros wrap" id="livros">
+    <div class="livro">
+      <img class="livro__imagens" src="img/Cangaceiro-Javascript.png" alt="Capa do livro Cangaceiro JavaScript" />
+      <h2 class="livro__titulo">
+        Cangaceiro JavaScript:
+        Uma aventura no sertão da programação
+      </h2>
+      <p class="livro__descricao">Flávio Almeida</p>
+      <p class="livro__preco" id="preco">R$29,90</p>
+      <div class="tags">
+        <span class="tag">Front-end</span>
+      </div>
+    </div>
+
+    <div class="livro">
+      <img class="livro__imagens indisponivel" src="img/O-Retorno-do-cangaceiro-JavaScript.png"
+        alt="Capa do livro O Retorno do Cangaceiro JavaScript+" />
+      <h2 class="livro__titulo">
+        Cangaceiro JavaScript +:
+        O Retorno do cangaceiro JavaScript
+      </h2>
+      <p class="livro__descricao">Flávio Almeida</p>
+      <p class="livro__preco" id="preco">R$29,90</p>
+      <div class="tags">
+        <span class="tag">Front-end</span>
+      </div>
+    </div>
+
+    <div class="livro">
+      <img class="livro__imagens" src="img/O-Retorno-do-cangaceiro-JavaScript2.png"
+        alt="Capa do livro o Retorno do Cangaceiro JavaScript: De padrões a uma abordagem funcional" />
+      <h2 class="livro__titulo">
+        O Retorno do cangaceiro JavaScript:
+        De padrões a uma abordagem funcional
+      </h2>
+      <p class="livro__descricao">Flávio Almeida</p>
+      <p class="livro__preco" id="preco">R$29,90</p>
+      <div class="tags">
+        <span class="tag">Front-end</span>
+        <span class="tag">Front-end</span>
+      </div>
+    </div>
+
+    <div class="livro">
+      <img class="livro__imagens indisponivel" src="img/Acessibilidade-na-Web.png"
+        alt="Capa do livro Acessibilidade na Web" />
+      <h2 class="livro__titulo">
+        Acessibilidade na Web:
+        Boas práticas para construir sites e aplicações acessíveis
+      </h2>
+      <p class="livro__descricao">Renaldo Ferraz</p>
+      <p class="livro__preco" id="preco">R$29,90</p>
+      <div class="tags">
+        <span class="tag">Front-end</span>
+        <span class="tag">Back-end</span>
+      </div>
+    </div>
+
+    <div class="livro">
+      <img class="livro__imagens" src="img/A-Web-Mobile.png"
+        alt="Capa do livro A Web Mobile: Design Responsivo e além para Web adaptada ao mundo mobile" />
+      <h2 class="livro__titulo">
+        A Web Mobile: Design Responsivo e além para Web adaptada ao mundo mobile
+      </h2>
+      <p class="livro__descricao">Sérgio Lopes</p>
+      <p class="livro__preco" id="preco">R$29,90</p>
+      <div class="tags">
+        <span class="tag">Front-end</span>
+        <span class="tag">Back-end</span>
+      </div>
+    </div>
+
+    <div class="livro">
+      <img class="livro__imagens" src="img/Coletânea-Front-end.png" alt="Capa do livro Coletânea Front-end: 
+          Uma antologia da comunidade front-end brasileira" />
+      <h2 class="livro__titulo">
+        Coletânea Front-end:
+        Uma antologia da comunidade front-end brasileira
+      </h2>
+      <p class="livro__descricao">Múltiplos autores</p>
+      <p class="livro__preco" id="preco">R$29,90</p>
+      <div class="tags">
+        <span class="tag">Front-end</span>
+        <span class="tag">Back-end</span>
+      </div>
+    </div>
+
+    <div class="livro">
+      <img class="livro__imagens" src="img/Guia-front-end.png" alt="Capa do livro Guia Front-End: 
+        O caminho das pedras para ser um dev Front-End" />
+      <h2 class="livro__titulo">
+        Guia Front-End:
+        O caminho das pedras para ser um dev Front-End
+      </h2>
+      <p class="livro__descricao">Diego Eis</p>
+      <p class="livro__preco" id="preco">R$29,90</p>
+      <div class="tags">
+        <span class="tag">Front-end</span>
+        <span class="tag">Back-end</span>
+      </div>
+    </div>
+
+    <div class="livro">
+      <img class="livro__imagens" src="img/HTML-e-CSS3.png"
+        alt="Capa do livro HTML5 e CSS3: Domine a web do futuro" />
+      <h2 class="livro__titulo">
+        HTML5 e CSS3: Domine a web do futuro
+      </h2>
+      <p class="livro__descricao">Lucas Mazza</p>
+      <p class="livro__preco" id="preco">R$29,90</p>
+      <div class="tags">
+        <span class="tag">Front-end</span>
+        <span class="tag">Back-end</span>
+      </div>
+    </div>
+
+    <div class="livro">
+      <img class="livro__imagens" src="img/Bootstrap4.png" alt="Capa do livro Bootstrap 4
+          Conheça a biblioteca front-end mais utilizada no mundo" />
+      <h2 class="livro__titulo">
+        Bootstrap 4
+        Conheça a biblioteca front-end mais utilizada no mundo
+      </h2>
+      <p class="livro__descricao">Natan Souza</p>
+      <p class="livro__preco" id="preco">R$29,90</p>
+      <div class="tags">
+        <span class="tag">Front-end</span>
+        <span class="tag">Back-end</span>
+      </div>
+    </div>
+
+    <div class="livro">
+      <img class="livro__imagens indisponivel" src="img/Sass.png" alt="Capa do livro Sass
+          Aprendendo pré-processadores CSS" />
+      <h2 class="livro__titulo">
+        Sass
+        Aprendendo pré-processadores CSS
+      </h2>
+      <p class="livro__descricao">Natan Souza</p>
+      <p class="livro__preco" id="preco">R$29,90</p>
+      <div class="tags">
+        <span class="tag">Front-end</span>
+        <span class="tag">Back-end</span>
+      </div>
+    </div>
+
+    <div class="livro">
+      <img class="livro__imagens" src="img/Turbine-seu-CSS.png" alt="Capa do livro Turbine seu CSS
+          Folhas de destilo inteligentes com Sass" />
+      <h2 class="livro__titulo">
+        Turbine seu CSS
+        Folhas de destilo inteligentes com Sass
+      </h2>
+      <p class="livro__descricao">Rosicléia Frasson</p>
+      <p class="livro__preco" id="preco">R$29,90</p>
+      <div class="tags">
+        <span class="tag">Front-end</span>
+        <span class="tag">Back-end</span>
+      </div>
+    </div>
+
+    <div class="livro">
+      <img class="livro__imagens" src="img/CSS-Eficiente.png" alt="Capa do livro CSS Eficiente: 
+          Técnicas e ferramentas que fazem a diferença nos seus estilos" />
+      <h2 class="livro__titulo">
+        CSS Eficiente: Técnicas e ferramentas que fazem a diferença nos seus estilos
+      </h2>
+      <p class="livro__descricao">Rosicléia Frasson</p>
+      <p class="livro__preco" id="preco">R$29,90</p>
+      <div class="tags">
+        <span class="tag">Front-end</span>
+        <span class="tag">Back-end</span>
+      </div>
+    </div>
+
+    <div class="livro">
+      <img class="livro__imagens" src="img/Angular-11-e-Firebase.png"
+        alt="Capa do livro Angular 11 e Firebase: Construindo uma aplicação integrada com a plataforma Google" />
+      <h2 class="livro__titulo">
+        Angular 11 e Firebase: Construindo uma aplicação integrada com a plataforma Google
+      </h2>
+      <p class="livro__descricao">Kheronn Khennedy Machado</p>
+      <p class="livro__preco" id="preco">R$29,90</p>
+      <div class="tags">
+        <span class="tag">Front-end</span>
+        <span class="tag">Back-end</span>
+      </div>
+    </div>
+
+    <div class="livro">
+      <img class="livro__imagens" src="img/Guia-prático-de-Typescript.png" alt="Capa do livro Guia prático de TypeScript
+          Melhore suas aplicações JavaScript" />
+      <h2 class="livro__titulo">
+        Guia prático de TypeScript
+        Melhore suas aplicações JavaScript
+      </h2>
+      <p class="livro__descricao">Thiago da Silva Adriano</p>
+      <p class="livro__preco" id="preco">R$29,90</p>
+      <div class="tags">
+        <span class="tag">Front-end</span>
+        <span class="tag">Back-end</span>
+      </div>
+    </div>
+
+    <div class="livro">
+      <img class="livro__imagens" src="img/Front-end-com-Vue.js.png" alt="Capa do livro  Front-end com Vue.js -
+          Da teoria à prática sem complicações" />
+      <h2 class="livro__titulo">
+        Front-end com Vue.js -
+        Da teoria à prática sem complicações
+      </h2>
+      <p class="livro__descricao">Leonardo Vilarinho</p>
+      <p class="livro__preco" id="preco">R$29,90</p>
+      <div class="tags">
+        <span class="tag">Front-end</span>
+        <span class="tag">Back-end</span>
+      </div>
+    </div>
+
+    <div class="livro">
+      <img class="livro__imagens" src="img/Vue.js.png" alt="Capa do livro  Vue.js
+          Construa aplicações incríveis" />
+      <h2 class="livro__titulo">
+        Vue.js
+        Construa aplicações incríveis
+      </h2>
+      <p class="livro__descricao">Caio Incau</p>
+      <p class="livro__preco" id="preco">R$29,90</p>
+      <div class="tags">
+        <span class="tag">Front-end</span>
+        <span class="tag">Back-end</span>
+      </div>
+    </div>
+
+  </section>
+  <section id="valor_total_livros_disponiveis">
+    <div class="livros__disponiveis">
+      <p>Todos os livros disponíveis por R$ <span id="valor">299,00</span></p>
+    </div>
+  </section>
+
+  <footer class="rodape">
+    <p class="rodape__texto">Pedro Teixeira</p>
+    <div class="rodape__container">
+        <h2>Educação</h2>
+        <ul class="rodape__lista">
+            <li class="lista__texto"><img src="img/Caelum.svg" alt=""><a href="" class="lista__rodape-link">Caelum </a></li>
+            <li class="lista__texto"><img src="img/CasaDoCodigo.svg" alt=""><a href="" class="lista__rodape-link">Casa do Código </a></li>
+        </ul>
+    </div>
+    <div class="rodape__container">
+        <h2>Educação Online</h2>
+        <ul class="rodape__lista">
+            <li class="lista__texto"><img src="img/Alura.svg" alt=""><a href="#" class="lista__rodape-link">Alura</a></li>
+            <li class="lista__texto"><img src="img/AluraEmpresas.svg" alt="#"><a href="" class="lista__rodape-link">Alura Para Empresas</a></li>
+            <li class="lista__texto"><img src="img/AluraLATAM.svg" alt="#"><a href="" class="lista__rodape-link">Alura LATAM</a></li>
+            <li class="lista__texto"><img src="img/AluraStart.svg" alt="#"><a href="" class="lista__rodape-link">Alura Start</a></li>
+            <li class="lista__texto"><img src="img/MusicDot.svg" alt="#"><a href="" class="lista__rodape-link">MusicDot</a></li>
+            <li class="lista__texto"><img src="img/AluraLingua.svg" alt=""><a href="" class="lista__rodape-link">Alura Língua</a></li>
+            <li class="lista__texto"><img src="img/PM3.svg" alt=""><a href="#" class="lista__rodape-link">PM3</a></li>
+        </ul>
+    </div>
+    <div class="rodape__container">
+        <h2>Comunidade</h2>
+        <ul class="rodape__lista">
+            <li class="lista__texto"><img src="img/HipstersTech.svg" alt=""><a href="#" class="lista__rodape-link">Hipsters ponto Tech</a></li>
+            <li class="lista__texto"><img src="img/ScubaDev.svg" alt=""><a href="#" class="lista__rodape-link">Scuba Dev</a></li>
+            <li class="lista__texto"><img src="img/LayersTech.svg" alt=""><a href="#" class="lista__rodape-link">Layers ponto Tech</a></li>
+            <li class="lista__texto"><img src="img/LikeABoss.svg" alt=""><a href="#" class="lista__rodape-link">Like a Boss</a></li>
+            <li class="lista__texto"><img src="img/CarreiraSemFronteira.svg" alt=""><a href="#" class="lista__rodape-link">Carreira sem Fronteira</a></li>
+            <li class="lista__texto"><img src="img/HipstersJobs.svg" alt=""><a href="#" class="lista__rodape-link">Hipsters ponto Jobs</a></li>
+            <li class="lista__texto"><img src="img/GUJ.svg" alt=""><a href="#" class="lista__rodape-link">GUJ</a></li>
+        </ul>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="js/swiper.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
