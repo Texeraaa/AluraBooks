@@ -28,6 +28,10 @@
     .categoria{
     display: none;
 }
+.container__imagem,
+    .container__imagem-titulo{    
+    cursor: pointer
+    }
 .lista-menu{
     display: none;
     position: absolute;
